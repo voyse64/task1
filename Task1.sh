@@ -10,15 +10,12 @@ do
 
 filesize=$(stat $file -c %s)
 
-if [ -f $file ]
-then
 echo "Размер файла" $file " = " $filesize
 if [ $filesize -gt $min ]
 then
 if [ $filesize -lt $max ]
 then
 cp $file ./Temp/
-fi
 fi
 fi
 done
